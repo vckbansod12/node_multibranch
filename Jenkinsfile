@@ -18,7 +18,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''chmod +x test.sh
-./test.sh'''
+./var/lib/jenkins/workspace/node_multibranch_master/test.sh'''
       }
     }
   }
