@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh 'npm install'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'npm install'
+          }
+        }
+        stage('') {
+          steps {
+            git(url: 'https://github.com/vckbansod12/node_multibranch.git', branch: 'master')
+          }
+        }
       }
     }
     stage('Test') {
