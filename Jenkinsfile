@@ -8,7 +8,7 @@ pipeline {
             sh 'npm install'
           }
         }
-        stage('') {
+        stage('Git') {
           steps {
             git(url: 'https://github.com/vckbansod12/node_multibranch.git', branch: 'master')
           }
