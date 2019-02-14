@@ -1,3 +1,3 @@
 #!/bin/bahs
 
-echo "Testing......"
+echo "Testing Today......"
